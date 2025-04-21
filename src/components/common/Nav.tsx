@@ -11,7 +11,7 @@ import BigBtn from "./BigBtn";
 
 function Nav() {
   return (
-    <nav className="w-screen h-fit flex justify-between items-center relative px-8 lg:px-14 py-6 ">
+    <nav className="w-screen h-fit flex justify-between items-center relative px-8 lg:px-14 py-4 md:py-6 ">
       <AlignJustify
         className="sm:hidden cursor-pointer"
         size={25}
@@ -20,7 +20,7 @@ function Nav() {
 
       {/* left  */}
       <div className="w-fit h-fit flex justify-center items-center sm:gap-5">
-        <div className="w-[50px] h-fit overflow-hidden relative">
+        <div className="w-[50px] h-fit overflow-hidden relative ml-8 sm:ml-0">
           <Image className="w-full h-fit object-cover" src={Logo} alt="logo" />
         </div>
         <Link

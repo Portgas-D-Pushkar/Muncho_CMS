@@ -2,6 +2,15 @@
 
 /* fonts  */
 
+/* Light */
+@font-face {
+  font-family: "Inter-Lig";
+  src: url("/fonts/Inter-Light.otf") format("opentype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Regular */
 @font-face {
   font-family: "Inter-Reg";
@@ -45,4 +54,9 @@
   font-weight: 800;
   font-style: normal;
   font-display: swap;
+}
+
+html,
+body {
+  overflow-x: hidden;
 }

@@ -16,10 +16,19 @@ function Hero() {
       <div className="w-screen h-screen min-h-fit flex flex-col justify-center items-center overflow-hidden relative">
         <Nav />
 
-        <div className="w-screen flex-1 overflow-hidden relative px-7 pb-3">
+        <div className="w-screen flex-1 min-h-fit overflow-hidden relative px-7 pb-5">
           <div className="w-full h-full overflow-hidden relative">
+            <Image
+              className="w-full h-full absolute top-0 left-0 rounded-2xl object-cover overflow-hidden z-0"
+              src={HeroImage}
+              alt="hero_image"
+            />
+
+            {/* overlay  */}
+            <div className="w-full h-full bg-black/20 absolute top-0 left-0 rounded-2xl z-10"></div>
+
             {/* texts  */}
-            <div className="w-full h-full absolute top-0 left-0 flex flex-col justify-center items-start gap-3 rounded-2xl z-20 px-6 sm:px-12 md:px-28">
+            <div className="w-full h-full flex flex-col justify-center items-start gap-3 rounded-2xl relative z-20 p-6 sm:p-12 md:p-28">
               <div className="w-fit flex justify-center items-center gap-2">
                 <div className="h-[30px] border-[3.5px] border-white"></div>
                 <h4 className="text-white text-[0.8rem] md:text-[1rem] font-['Inter-Reg']">
@@ -31,14 +40,6 @@ function Hero() {
               </h1>
               <BigBtn title={"Order Online"} link={"/"} />
             </div>
-
-            {/* overlay  */}
-            <div className="w-full h-full bg-black/20 absolute top-0 left-0 rounded-2xl z-10"></div>
-            <Image
-              className="w-full h-full rounded-2xl object-cover overflow-hidden relative z-0"
-              src={HeroImage}
-              alt="hero_image"
-            />
           </div>
         </div>
       </div>
