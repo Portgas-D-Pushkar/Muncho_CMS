@@ -1,10 +1,14 @@
-import Faq from "@/components/Faq"
+import Faq from "@/components/Faq";
 import Locations from "@/components/Locations";
-export default function Home() {
+import Hero from "@/components/Hero";
+function Home() {
   return (
-  <div>
-    <Faq/>
-    <Locations/>
-  </div>
+    <div>
+      <Hero />
+      <Faq />
+      <Locations />
+    </div>
   );
 }
+
+export default Home;
