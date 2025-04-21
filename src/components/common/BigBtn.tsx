@@ -4,7 +4,13 @@ import Link from "next/link";
 // components
 import { ChevronRight } from "lucide-react";
 
-function BigBtn({ title, link, styles = "" }) {
+interface BigBtnProps {
+  title: string;
+  link: string;
+  styles?: string;
+}
+
+function BigBtn({ title, link, styles }: BigBtnProps) {
   return (
     <Link
       className={`flex justify-center items-center max-w-fit bg-[#06B906] text-black text-[0.8rem] font-['Inter-Reg'] rounded-[0.5rem] gap-1 px-3 py-1.5 ${styles}`}
