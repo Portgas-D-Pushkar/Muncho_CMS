@@ -12,7 +12,6 @@ import Image from "next/image";
 
 function Hero() {
   return (
-    <div className="w-screen h-fit overflow-hidden relative">
       <div className="w-screen h-screen min-h-fit flex flex-col justify-center items-center overflow-hidden relative">
         <Nav />
 
@@ -43,7 +42,6 @@ function Hero() {
           </div>
         </div>
       </div>
-    </div>
   );
 }
 
