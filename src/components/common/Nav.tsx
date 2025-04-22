@@ -8,6 +8,7 @@ import Logo from "../../../public/Images/logo.png";
 import { AlignJustify, ChevronDown } from "lucide-react";
 import Image from "next/image";
 import BigBtn from "./BigBtn";
+import Menu from "../Menu";
 
 function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,8 +18,9 @@ function Nav() {
   };
 
   return (
-    <nav className="w-screen h-fit flex justify-between items-center relative px-8 lg:px-14 py-4 md:py-6 z-30">
+    <nav className="w-screen h-fit flex justify-between items-center relative px-8 lg:px-14 py-4 md:py-6 z-30 ">
       <AlignJustify
+        onClick={toggleMenu}
         className="sm:hidden cursor-pointer"
         size={25}
         color="black"
@@ -70,71 +72,8 @@ function Nav() {
       </div>
 
       {/* menu  */}
-      {isMenuOpen && (
-        <div className="hidden sm:flex w-[82%] h-fit bg-white rounded-[0.8rem] justify-between items-center absolute top-[80px] left-1/2 -translate-x-1/2 py-3 px-24">
-          <div className="w-fit h-fit flex flex-col items-start justify-center gap-5">
-            <Link
-              className="bg-[#EBEBEC] text-black text-[0.8rem] font-['Inter-Med'] rounded-[0.5rem] px-2 py-1.5"
-              href="/"
-            >
-              Home
-            </Link>
 
-            <Link
-              className="text-[#4D4D4D] text-[0.8rem] font-['Inter-Reg']"
-              href="/"
-            >
-              Catering
-            </Link>
-
-            <Link
-              className="text-[#4D4D4D] text-[0.8rem] font-['Inter-Reg']"
-              href="/"
-            >
-              Gift Cards
-            </Link>
-          </div>
-
-          <div className="w-fit h-fit flex flex-col items-start justify-center gap-5">
-            <Link
-              className="text-[#4D4D4D] text-[0.8rem] font-['Inter-Reg']"
-              href="/"
-            >
-              Menu
-            </Link>
-
-            <Link
-              className="text-[#4D4D4D] text-[0.8rem] font-['Inter-Reg']"
-              href="/"
-            >
-              Careers
-            </Link>
-
-            <Link
-              className="text-[#4D4D4D] text-[0.8rem] font-['Inter-Reg']"
-              href="/"
-            >
-              Press
-            </Link>
-          </div>
-
-          <div className="w-fit h-fit flex flex-col items-start justify-center gap-5">
-            <Link
-              className="text-[#4D4D4D] text-[0.8rem] font-['Inter-Reg']"
-              href="/"
-            >
-              Story
-            </Link>
-
-            <Link
-              className="text-[#4D4D4D] text-[0.8rem] font-['Inter-Reg']"
-              href="/"
-            >
-              Meet our team
-            </Link>
-          </div>
-        </div>
-      )}
+      {isMenuOpen && <Menu />}
     </nav>
   );
 }
