@@ -1,23 +1,16 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 
 // components
 import Hero from "@/components/Hero";
 import Dishes from "@/components/Dishes";
 import Gallery from "@/components/Gallery";
-import Menu from "@/components/Menu";
 
 // Gallery Images
 import { Gallery1_Images, Gallery2_Images } from "@/data/Gallery";
 
 function page() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsMenuOpen((prev) => !prev);
-  };
-
   return (
     <div className="w-screen h-fit overflow-hidden relative">
       <Hero />
@@ -51,8 +44,6 @@ function page() {
         </div>
         <Gallery images={Gallery2_Images} styles="mt-12" />
       </div>
-
-      <Menu />
     </div>
   );
 }
