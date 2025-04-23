@@ -10,6 +10,7 @@ import Faq from "@/components/Faq";
 import Locations from "@/components/Locations";
 import Catering from "@/components/Catering";
 import GiftCardSection from "@/components/giftCard";
+import Footer from "@/components/footer";
 
 // Gallery Images
 import { Gallery1_Images, Gallery2_Images } from "@/data/Gallery";
@@ -53,6 +54,7 @@ function Home() {
       <Locations />
 
       {/* Footer  */}
+      <Footer/>
     </div>
   );
 }

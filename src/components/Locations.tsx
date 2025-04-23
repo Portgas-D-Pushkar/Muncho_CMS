@@ -72,10 +72,6 @@ export default function Locations() {
             loc.mapQuery
           )}&output=embed`}
           className="w-full lg:w-[397px] h-[280px] md:h-[353px] rounded-[14px] border-0"
-          allowFullScreen
-          {...(HTMLIFrameElement.prototype.hasOwnProperty("loading")
-            ? { loading: "lazy" }
-            : {})}
         />
 
         <div className="flex-1 flex flex-col gap-8 md:gap-[98px]">
