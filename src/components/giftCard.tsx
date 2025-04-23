@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import BigBtn from "./common/BigBtn";
+import GiftCard from "../../public/Images/GiftCard.png"
 
 const GiftCardSection = () => {
   return (
@@ -23,7 +24,7 @@ const GiftCardSection = () => {
       {/* Image Section */}
       <div className="flex-1 mt-10 md:mt-0 md:ml-12 rounded-2xl overflow-hidden">
         <Image
-          src="/images/GiftCard.png"
+          src={GiftCard}
           alt="Gift Card Taco"
           width={520}
           height={520}
