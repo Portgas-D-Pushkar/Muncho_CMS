@@ -20,24 +20,24 @@ export default function Locations() {
   const loc = locations[selected];
 
   return (
-    <section className="w-full px-[110px] py-[196px] font-inter">
-      <h1 className="capitalize font-inter text-[56px] leading-[62px] tracking-[-2.8px] font-medium pb-[64px]">
+    <section className="w-full px-4 md:px-[110px] py-[100px] md:py-[196px] font-inter">
+      <h1 className="capitalize text-[32px] md:text-[56px] leading-[1.2] tracking-tight font-medium pb-10 md:pb-[64px]">
         Our locations
       </h1>
 
       <div className="relative mb-6">
         <div
-          className="flex overflow-x-auto gap-3 no-scrollbar"
+          className="flex overflow-x-auto gap-3 no-scrollbar scroll-smooth"
           id="location-scroll"
         >
           {locations.map((location, i) => (
             <button
               key={i}
               onClick={() => setSelected(i)}
-              className={`whitespace-nowrap rounded-full px-5 py-2 text-sm font-medium ${
+              className={`whitespace-nowrap rounded-full px-5 py-2 text-sm font-medium transition ${
                 selected === i
-                  ? "bg-[#ffffff] text-black border border-[#EBEBEC]"
-                  : "bg-[#EBEBEC] text-black "
+                  ? "bg-white text-black border border-[#EBEBEC]"
+                  : "bg-[#EBEBEC] text-black"
               }`}
             >
               {location.name}
@@ -45,8 +45,8 @@ export default function Locations() {
           ))}
         </div>
 
-        {/* Arrows */}
-        <div className="absolute right-0 top-1/2 -translate-y-1/2 flex gap-2 pr-2">
+        {/* Arrows (hidden on small screens) */}
+        <div className="absolute right-2 top-1/2 -translate-y-1/2 gap-2 hidden sm:flex">
           <button
             onClick={() => handleScroll("left")}
             className="w-10 h-10 rounded-full bg-gray-200 hover:bg-gray-300 flex items-center justify-center"
@@ -64,26 +64,29 @@ export default function Locations() {
         </div>
       </div>
 
-      {/* Map + Details */}
+      {/* Map + Info Block */}
       <div className="bg-[#EBEBEC] p-6 rounded-2xl flex flex-col lg:flex-row gap-6">
         <iframe
           title="Map"
           src={`https://www.google.com/maps?q=${encodeURIComponent(
             loc.mapQuery
           )}&output=embed`}
-          className="w-full lg:w-[397px] h-[353px] rounded-[14px] border-0"
+          className="w-full lg:w-[397px] h-[280px] md:h-[353px] rounded-[14px] border-0"
           allowFullScreen
-          loading="lazy"
+          {...(HTMLIFrameElement.prototype.hasOwnProperty("loading")
+            ? { loading: "lazy" }
+            : {})}
         />
 
-        <div className="flex-1 flex flex-col gap-[98px]">
-          <div className="flex justify-between">
+        <div className="flex-1 flex flex-col gap-8 md:gap-[98px]">
+          {/* Location Name & City */}
+          <div className="flex flex-col md:flex-row justify-between gap-6">
             <div>
-              <h3 className="text-xl font-semibold">{loc.name}</h3>
+              <h3 className="text-xl md:text-2xl font-semibold">{loc.name}</h3>
               <p className="text-lg text-gray-700">{loc.city}</p>
             </div>
 
-            <div className="flex justify-end mt-4">
+            <div className="flex justify-start md:justify-end">
               <a
                 href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(
                   loc.mapQuery
@@ -97,13 +100,14 @@ export default function Locations() {
             </div>
           </div>
 
-          <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-[80px] border-t pt-4 text-sm text-gray-800">
+          {/* Address and Contacts */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 border-t pt-4 text-sm text-gray-800">
             <div>
-              <p className="font-medium">Address</p>
+              <p className="font-medium mb-1">Address</p>
               <p>{loc.address}</p>
             </div>
             <div>
-              <p className="font-medium">Contacts</p>
+              <p className="font-medium mb-1">Contacts</p>
               <p>{loc.phone}</p>
               <p>{loc.email}</p>
             </div>

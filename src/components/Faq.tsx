@@ -43,8 +43,8 @@ function Index() {
 
   return (
     <>
-      <div className="px-[110px] pt-[124px]">
-        <h1 className="capitalize font-inter text-[56px] leading-[62px] tracking-[-2.8px] font-medium pb-[64px]">
+      <div className="lg:px-[110px] pt-[124px] px-1 text-center lg:text-left">
+        <h1 className="capitalize font-semibold font-inter text-[24px] lg:text-[56px] leading-[28.8px] lg:leading-[62px] lg:tracking-[-2.8px] lg:font-medium pb-[64px] lg:w-full ">
           Frequently asked questions
         </h1>
         <div className="h-fit p-2  bg-[#Ffffff]">
