@@ -6,6 +6,10 @@ import React from "react";
 import Hero from "@/components/Hero";
 import Dishes from "@/components/Dishes";
 import Gallery from "@/components/Gallery";
+import Faq from "@/components/Faq";
+import Locations from "@/components/Locations";
+import Catering from "@/components/Catering";
+import GiftCardSection from "@/components/giftCard";
 
 // Gallery Images
 import { Gallery1_Images, Gallery2_Images } from "@/data/Gallery";
@@ -29,8 +33,7 @@ function Home() {
 
         <Gallery images={Gallery1_Images} styles="mt-12" />
       </div>
-
-      <Dishes />
+      <Catering />
 
       {/* Gallery 2  */}
       <div className="w-full h-fit relative py-10">
@@ -44,6 +47,12 @@ function Home() {
         </div>
         <Gallery images={Gallery2_Images} styles="mt-12" />
       </div>
+      <Dishes />
+      <GiftCardSection />
+      <Faq/>
+      <Locations />
+
+      {/* Footer  */}
     </div>
   );
 }
