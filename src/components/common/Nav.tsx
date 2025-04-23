@@ -1,18 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 
 // images
 import Logo from "../../../public/Images/logo.png";
 
 // components
-import { AlignJustify } from "lucide-react";
+import { AlignJustify, ChevronDown } from "lucide-react";
 import Image from "next/image";
 import BigBtn from "./BigBtn";
+import Menu from "../Menu";
 
 function Nav() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen((prev) => !prev);
+  };
+
   return (
-    <nav className="w-screen h-fit flex justify-between items-center relative px-8 lg:px-14 py-6 ">
+    <nav className="w-screen h-fit flex justify-between items-center relative px-8 lg:px-14 py-4 md:py-6 z-30 ">
       <AlignJustify
+        onClick={toggleMenu}
         className="sm:hidden cursor-pointer"
         size={25}
         color="black"
@@ -20,7 +28,7 @@ function Nav() {
 
       {/* left  */}
       <div className="w-fit h-fit flex justify-center items-center sm:gap-5">
-        <div className="w-[50px] h-fit overflow-hidden relative">
+        <div className="w-[50px] h-fit overflow-hidden relative ml-8 sm:ml-0">
           <Image className="w-full h-fit object-cover" src={Logo} alt="logo" />
         </div>
         <Link
@@ -42,12 +50,13 @@ function Nav() {
           SweepStake
         </Link>
 
-        <select className="hidden sm:block text-[#4D4D4D] text-[0.8rem] font-['Inter-Reg'] focus:outline-none">
-          <option>More</option>
-          <option>Option 1</option>
-          <option>Option 2</option>
-          <option>Option 3</option>
-        </select>
+        <button
+          onClick={toggleMenu}
+          className="hidden sm:flex text-[#4D4D4D] text-[0.8rem] font-['Inter-Reg'] justify-center items-center gap-1 cursor-pointer"
+        >
+          Menu
+          <ChevronDown size={15} color="#4D4D4D" />
+        </button>
       </div>
 
       {/* right  */}
@@ -61,6 +70,10 @@ function Nav() {
 
         <BigBtn title={"Order Online"} link={"/"} styles="hidden sm:flex" />
       </div>
+
+      {/* menu  */}
+
+      {isMenuOpen && <Menu />}
     </nav>
   );
 }
