@@ -12,8 +12,6 @@
 
 /* Optional Named Variants if you want separate classes */
 
-<<<<<<< HEAD
-=======
 /* Light */
 @font-face {
   font-family: "Inter-Lig";
@@ -24,7 +22,6 @@
 }
 
 /* Regular */
->>>>>>> e031cf8311fba457e4f8e35a8ecec198574c6fb8
 @font-face {
   font-family: "Inter-Reg";
   src: url("/fonts/Inter-Regular.otf") format("opentype");
