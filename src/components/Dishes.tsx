@@ -9,7 +9,7 @@ import TemplateData from "@/data/template.data.json";
 
 function Dishes() {
   return (
-    <div className="w-full min-h-fit overflow-hidden relative">
+    <div className="w-full min-h-fit relative">
       {/* Texts */}
       <div className="w-fit h-fit flex flex-col justify-center items-center mx-auto">
         <h1 className="w-[180px] sm:w-fit text-center text-black text-[1.5rem] md:text-[2rem] font-['Inter-Med'] leading-6">
