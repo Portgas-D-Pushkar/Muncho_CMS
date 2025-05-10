@@ -20,7 +20,7 @@ function Home() {
     <div className="w-screen h-fit overflow-hidden relative">
       {/* Hero  */}
       <div className="w-full h-fit px-5">
-      <Hero />
+        <Hero />
       </div>
 
       {/* Gallery 1  */}
@@ -52,7 +52,11 @@ function Home() {
         <Gallery images={TemplateData.gallery_2.images} styles="mt-12" />
       </div>
 
-      <Dishes />
+      {/* Dishes  */}
+      <div className="w-full h-fit px-5 md:px-28 py-16">
+        <Dishes />
+      </div>
+
       <GiftCardSection />
       <Faq />
       <Locations />
