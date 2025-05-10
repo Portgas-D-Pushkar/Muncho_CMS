@@ -2,29 +2,29 @@
 
 import Image from "next/image";
 import BigBtn from "./common/BigBtn";
-import GiftCard from "../../public/Images/GiftCard.png"
+import { giftCard } from "../data/template.data.json"; // Adjust path as needed
 
 const GiftCardSection = () => {
   return (
-    <section className="flex w-full self-center flex-col-reverse gap-2 md:flex-row  font-inter items-center justify-between text-black md:px-[108px] px-4 py-12">
+    <section className="flex w-full max-w-[1440px] mx-auto self-center flex-col-reverse gap-2 md:flex-row font-inter items-center justify-center text-black md:px-[108px] px-4 py-12">
       {/* Text Section */}
-      <div className="flex-1 text-left space-y-3 lg:space-y-6 max-w-xl">
+      <div className="flex-1 text-center md:text-left space-y-3 lg:space-y-6 max-w-xl">
         <h2 className="font-medium text-[24px] lg:text-[56px] lg:leading-[62px] tracking-[-2.8px] text-black">
-          Gift Cards
+          {giftCard.heading}
         </h2>
         <p className="text-[#4D4D4D] text-[16px] lg:leading-[22px] font-medium tracking-[-0.2px]">
-          Savor the flavor of Talkin&apos; Tacos® with our gift cards! Give the
-          gift of delicious experiences, treating your friends and family to a
-          fiesta of taste at our restaurant.
+          {giftCard.description}
         </p>
 
-        <BigBtn title={" Explore Gift Cards"} link={"/"} />
+        <div className="flex justify-center md:justify-start">
+          <BigBtn title={giftCard.button.title} link={giftCard.button.link} />
+        </div>
       </div>
 
       {/* Image Section */}
-      <div className="flex-1 mt-10 md:mt-0 md:ml-12 rounded-2xl overflow-hidden">
+      <div className="flex-1 mt-10 md:mt-0 md:ml-12 rounded-2xl overflow-hidden flex justify-center">
         <Image
-          src={GiftCard}
+          src={giftCard.image}
           alt="Gift Card Taco"
           width={520}
           height={520}

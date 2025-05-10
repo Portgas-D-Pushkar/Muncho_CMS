@@ -59,6 +59,37 @@
     ]
   },
 
+  "faq": {
+    "heading": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Here are some of the most common questions we get asked"
+    },
+    "questions": [
+      {
+        "title": "What meals do you serve?",
+        "description": "UI components can improve UX by providing familiar, consistent interactions that make it easy for users to navigate and interact with an application."
+      },
+      {
+        "title": "Do you offer delivery or takeout?",
+        "description": "Developers can ensure the responsiveness of UI components by using techniques such as fluid layouts, flexible grids, and media queries to adapt the components to different screen sizes and orientations."
+      },
+      {
+        "title": "What areas do you serve?",
+        "description": "Some common challenges include maintaining consistency across different devices and screen sizes, ensuring compatibility with various browsers and assistive technologies, and balancing flexibility with ease of use."
+      }
+    ]
+  },
+
+  "giftCard": {
+  "heading": "Gift Cards",
+  "description": "Savor the flavor of Talkin' Tacos® with our gift cards! Give the gift of delicious experiences, treating your friends and family to a fiesta of taste at our restaurant.",
+  "button": {
+    "title": "Explore Gift Cards",
+    "link": "/"
+  },
+  "image": "/Images/GiftCard.png"
+},
+
   "dishes": {
     "heading": {
       "title": "Try our most popular items",
