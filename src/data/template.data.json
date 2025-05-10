@@ -9,9 +9,7 @@
         "subtitle": "Best Tacos In Town",
         "title": "FREE DELIVERY TACO TUESDAY COUPON AT CHECKOUT: LOVETT"
       },
-      "image": {
-        "src": "/images/hero_image.jpeg"
-      }
+      "image": "/images/hero_image.jpeg"
     }
   },
 

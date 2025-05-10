@@ -1,34 +1,33 @@
 import React from "react";
-import CateringImg from "../../public/Images/Catering/Catering.png";
+
 import BigBtn from "./common/BigBtn";
 import Image from "next/image";
 
+import TemplateData from "@/data/template.data.json";
+
 const Catering = () => {
   return (
-    <div className="relative h-[618px] lg:h-auto my-[120px] md:mt-[225px] flex flex-col items-center justify-center w-full  md:px-0">
+    <div className="w-full h-fit relative">
       {/* Background Image */}
-      <Image
-        src={CateringImg}
-        alt="Catering Img"
-        width={1409}
-        height={800}
-        className="w-full h-full"
-      />
+
+      <div className="w-full h-[600px] relative rounded-[30px] overflow-hidden">
+        <Image
+          fill
+          src={TemplateData.catering.image}
+          alt="Catering Img"
+          className="w-full h-full object-cover"
+        />
+      </div>
 
       {/* Floating Card Content */}
-      <div className="absolute bottom-6 md:top-20 left-1/2 md:left-40 -translate-x-1/2 md:translate-x-0 w-[332px] md:w-[632px] h-auto md:h-[640px] bg-white/80 backdrop-blur-md rounded-[30px] md:rounded-[50px] flex items-center justify-center p-6 md:p-10">
-        <div>
-          <h1 className="text-[32px] md:text-[56px] leading-tight md:leading-[62px] font-medium tracking-tight text-black font-inter mb-6 md:pb-[64px]">
-            Catering & Events
-          </h1>
-          <p className="text-[15px] md:text-[16px] leading-[22px] text-[#4D4D4D] font-medium tracking-tight font-inter mb-6 md:mb-[40px] max-w-[100%] md:w-[472px]">
-            Spice up your corporate and private events with Talkin&apos; Tacos®!
-            Our flavorful and festive catering services bring the fiesta to your
-            workplace and private events, ensuring a memorable experience for
-            all your colleagues and family!
-          </p>
-          <BigBtn title={"Arrange Your Fiesta!"} link={"/"} />
-        </div>
+      <div className="w-[90%] sm:w-fit h-fit bg-white/80 backdrop-blur-md absolute bottom-4 sm:top-1/2 sm:-translate-y-1/2 left-1/2 -translate-x-1/2 sm:left-10 sm:-translate-x-0 space-y-6 rounded-4xl px-10 py-10 sm:py-40">
+        <h1 className=" text-5xl font-medium tracking-tight text-black font-inter">
+          {TemplateData.catering.text.title}
+        </h1>
+        <p className="w-full max-w-[425px] font-inter text-[14px] text-[#4D4D4D] tracking-tight leading-[17px]">
+          {TemplateData.catering.text.description}
+        </p>
+        <BigBtn title={"Arrange Your Fiesta!"} link={"/"} />
       </div>
     </div>
   );

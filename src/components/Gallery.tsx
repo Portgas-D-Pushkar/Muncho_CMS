@@ -4,7 +4,7 @@ import Image from "next/image";
 function Gallery({ images, styles = "" }: { images: string[]; styles?: string }) {
   return (
     <div
-      className={`w-full h-fit grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 overflow-hidden relative px-7 sm:px-18 lg:px-24 ${styles}`}
+      className={`w-full h-fit grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 overflow-hidden relative ${styles}`}
     >
       {images.length > 0 &&
         images.map((elem, i) => (

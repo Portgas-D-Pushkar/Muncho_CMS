@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import Link from "next/link";
 
-// images
-import Logo from "../../../public/Images/logo.png";
-
 // components
 import { AlignJustify, ChevronDown } from "lucide-react";
 import Image from "next/image";
 import BigBtn from "./BigBtn";
 import Menu from "../Menu";
+
+// Json
+import TemplateData from "@/data/template.data.json";
 
 function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,7 +18,7 @@ function Nav() {
   };
 
   return (
-    <nav className="w-screen h-fit flex justify-between items-center relative px-8 lg:px-14 py-4 md:py-6 z-30 ">
+    <nav className="w-full h-fit flex justify-between items-center relative ">
       <AlignJustify
         onClick={toggleMenu}
         className="sm:hidden cursor-pointer"
@@ -28,8 +28,14 @@ function Nav() {
 
       {/* left  */}
       <div className="w-fit h-fit flex justify-center items-center sm:gap-5">
-        <div className="w-[50px] h-fit overflow-hidden relative ml-8 sm:ml-0">
-          <Image className="w-full h-fit object-cover" src={Logo} alt="logo" />
+        <div className="w-fit h-fit overflow-hidden relative ml-8 sm:ml-0">
+          <Image
+            className="object-cover"
+            width={50}
+            height={50}
+            src={TemplateData.home.nav.logo}
+            alt="logo"
+          />
         </div>
         <Link
           className="hidden sm:block bg-[#EBEBEC] text-black text-[0.8rem] font-['Inter-Med'] rounded-[0.5rem] px-2 py-1.5"
