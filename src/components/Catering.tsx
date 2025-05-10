@@ -1,5 +1,5 @@
 import React from "react";
-import CateringImg from "../../public/Images/CateringImg.png";
+import CateringImg from "../../public/Images/Catering/Catering.png";
 import BigBtn from "./common/BigBtn";
 import Image from "next/image";
 

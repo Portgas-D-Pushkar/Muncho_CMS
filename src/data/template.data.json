@@ -1,0 +1,78 @@
+{
+  "home": {
+    "nav": {
+      "logo": "/Images/logo.png"
+    },
+
+    "hero": {
+      "text": {
+        "subtitle": "Best Tacos In Town",
+        "title": "FREE DELIVERY TACO TUESDAY COUPON AT CHECKOUT: LOVETT"
+      },
+      "image": {
+        "src": "/images/hero_image.jpeg"
+      }
+    }
+  },
+
+  "gallery_1": {
+    "heading": {
+      "title": "Talkin' Tacos®",
+      "subtitle": "Less Talkin' More Tacos ™"
+    },
+    "images": [
+      "/Images/Gallery/gallery_image_1.png",
+      "/Images/Gallery/gallery_image_2.png",
+      "/Images/Gallery/gallery_image_3.png",
+      "/Images/Gallery/gallery_image_4.png",
+      "/Images/Gallery/gallery_image_5.png",
+      "/Images/Gallery/gallery_image_6.png",
+      "/Images/Gallery/gallery_image_7.png",
+      "/Images/Gallery/gallery_image_8.png",
+      "/Images/Gallery/gallery_image_9.png",
+      "/Images/Gallery/gallery_image_10.png",
+      "/Images/Gallery/gallery_image_11.png",
+      "/Images/Gallery/gallery_image_12.png"
+    ]
+  },
+
+  "catering": {
+    "image": "/Images/Catering/Catering.png",
+    "text": {
+      "title": "Catering & Events",
+      "description": "Spice up your corporate and private events with Talkin' Tacos®! Our flavorful and festive catering services bring the fiesta to your workplace and private events, ensuring a memorable experience for all your colleagues and family!"
+    }
+  },
+
+  "gallery_2": {
+    "heading": {
+      "title": "Florida, Atlanta, Washington D.C, NewYork, North Carolina, Texas and growing!"
+    },
+    "images": [
+      "/Images/Gallery_2/gallery2_image_1.png",
+      "/Images/Gallery_2/gallery2_image_2.png",
+      "/Images/Gallery_2/gallery2_image_3.png",
+      "/Images/Gallery_2/gallery2_image_4.png",
+      "/Images/Gallery_2/gallery2_image_5.png",
+      "/Images/Gallery_2/gallery2_image_6.png",
+      "/Images/Gallery_2/gallery2_image_7.png",
+      "/Images/Gallery_2/gallery2_image_8.png",
+      "/Images/Gallery_2/gallery2_image_9.png"
+    ]
+  },
+
+  "dishes": {
+    "heading": {
+      "title": "Try our most popular items",
+      "subtitle": "Treat yourself to our must-try list that has everyone talking"
+    },
+
+    "cards": [
+      {
+        "title": "Taco Tuesday",
+        "subtitle": "2 for 1 Tacos",
+        "image": "/Images/Dishes/dish_1.jpeg"
+      }
+    ]
+  }
+}
