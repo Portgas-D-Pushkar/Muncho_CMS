@@ -14,7 +14,7 @@ function Hero() {
   return (
     <div className="w-full h-screen min-h-fit flex flex-col justify-center items-center overflow-hidden relative">
       <div className="w-full h-fit px-8 lg:px-14 py-4 md:py-6">
-        <Nav />
+        <Nav route={"Home"} />
       </div>
 
       <div className="w-full flex-1 min-h-fit overflow-hidden relative pb-5">
@@ -22,7 +22,7 @@ function Hero() {
           <Image
             className="absolute top-0 left-0 object-cover overflow-hidden z-0"
             fill
-            src={TemplateData.home.hero.image}
+            src={TemplateData.hero.image}
             alt="hero_image"
           />
 
@@ -34,11 +34,11 @@ function Hero() {
             <div className="w-fit flex justify-center items-center gap-2">
               <div className="h-[30px] border-[3.5px] border-white"></div>
               <h4 className="text-white text-[0.8rem] md:text-[1rem] font-['Inter-Reg']">
-                {TemplateData.home.hero.text.subtitle}
+                {TemplateData.hero.text.subtitle}
               </h4>
             </div>
             <h1 className="w-full max-w-[650px] text-white text-[2rem] md:text-[3.5rem] font-['Inter-Med'] leading-11 md:leading-16">
-              {TemplateData.home.hero.text.title}
+              {TemplateData.hero.text.title}
             </h1>
             <BigBtn title={"Order Online"} link={"/"} />
           </div>

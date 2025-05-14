@@ -9,8 +9,9 @@ import Menu from "../Menu";
 
 // Json
 import TemplateData from "@/data/template.data.json";
+import { Url } from "next/dist/shared/lib/router/router";
 
-function Nav() {
+function Nav({ route }: { route: String }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -33,28 +34,25 @@ function Nav() {
             className="object-cover"
             width={50}
             height={50}
-            src={TemplateData.home.nav.logo}
+            src={TemplateData.nav.logo}
             alt="logo"
           />
         </div>
-        <Link
-          className="hidden sm:block bg-[#EBEBEC] text-black text-[0.8rem] font-['Inter-Med'] rounded-[0.5rem] px-2 py-1.5"
-          href="/"
-        >
-          Home
-        </Link>
-        <Link
-          className="hidden sm:block text-[#4D4D4D] text-[0.8rem] font-['Inter-Reg']"
-          href="/"
-        >
-          Menu
-        </Link>
-        <Link
-          className="hidden sm:block text-[#4D4D4D] text-[0.8rem] font-['Inter-Reg']"
-          href="/"
-        >
-          SweepStake
-        </Link>
+        {TemplateData.nav.links.length > 0 &&
+          TemplateData.nav.links.map(
+            ({ title, link }: { title: String; link: Url }, i) => (
+              <Link
+                key={i}
+                className={`hidden sm:block text-[#4D4D4D] text-[0.8rem] font-['Inter-Reg'] ${
+                  route === title &&
+                  "text-black bg-[#EBEBEC] rounded-[0.5rem] px-2 py-1.5"
+                }`}
+                href={link}
+              >
+                {title}
+              </Link>
+            )
+          )}
 
         <button
           onClick={toggleMenu}

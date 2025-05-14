@@ -1,8 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { locations } from "@/data/location";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+
+import TemplateData from "@/data/template.data.json";
 
 export default function Locations() {
   const [selected, setSelected] = useState(0);
@@ -17,7 +18,8 @@ export default function Locations() {
     }
   };
 
-  const loc = locations[selected];
+  const loc = TemplateData.location.locations[selected];
+  if (!loc) return null;
 
   return (
     <section className="w-full px-4 md:px-[110px] py-[100px] md:py-[196px] font-inter">
@@ -30,19 +32,20 @@ export default function Locations() {
           className="flex overflow-x-auto gap-3 no-scrollbar scroll-smooth"
           id="location-scroll"
         >
-          {locations.map((location, i) => (
-            <button
-              key={i}
-              onClick={() => setSelected(i)}
-              className={`whitespace-nowrap rounded-full px-5 py-2 text-sm font-medium transition ${
-                selected === i
-                  ? "bg-white text-black border border-[#EBEBEC]"
-                  : "bg-[#EBEBEC] text-black"
-              }`}
-            >
-              {location.name}
-            </button>
-          ))}
+          {TemplateData.location.locations.length > 0 &&
+            TemplateData.location.locations.map((location, i) => (
+              <button
+                key={i}
+                onClick={() => setSelected(i)}
+                className={`whitespace-nowrap rounded-full px-5 py-2 text-sm font-medium transition ${
+                  selected === i
+                    ? "bg-white text-black border border-[#EBEBEC]"
+                    : "bg-[#EBEBEC] text-black"
+                }`}
+              >
+                {location.name}
+              </button>
+            ))}
         </div>
 
         {/* Arrows (hidden on small screens) */}

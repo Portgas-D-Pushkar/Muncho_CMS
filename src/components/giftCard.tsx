@@ -17,7 +17,7 @@ const GiftCardSection = () => {
         </p>
 
         <div className="flex justify-center md:justify-start">
-          <BigBtn title={giftCard.button.title} link={giftCard.button.link} />
+          <BigBtn title={"Explore gift cards"} link={"/"} />
         </div>
       </div>
 
