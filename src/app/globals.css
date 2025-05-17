@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+/* === Inter Font Family (All Weights) === */
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter.ttf') format('truetype');
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+/* Optional Named Variants if you want separate classes */
+
+/* Light */
+@font-face {
+  font-family: "Inter-Lig";
+  src: url("/fonts/Inter-Light.otf") format("opentype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Regular */
+@font-face {
+  font-family: "Inter-Reg";
+  src: url("/fonts/Inter-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter-Med";
+  src: url("/fonts/Inter-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter-Sem";
+  src: url("/fonts/Inter-Semibold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter-Bold";
+  src: url("/fonts/Inter-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter-ExBold";
+  src: url("/fonts/Inter-ExtraBold.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Utility Class */
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}

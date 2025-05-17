@@ -1,0 +1,150 @@
+{
+  "nav": {
+    "logo": "/Images/logo.png",
+    "links": [
+      {
+        "title": "Home",
+        "link": "/"
+      },
+      {
+        "title": "Menu",
+        "link": "/menu"
+      },
+      {
+        "title": "SweepStake",
+        "link": "/sweepStake"
+      }
+    ],
+    "index": "0"
+  },
+
+  "hero": {
+    "text": {
+      "subtitle": "Best Tacos In Town",
+      "title": "FREE DELIVERY TACO TUESDAY COUPON AT CHECKOUT: LOVETT"
+    },
+    "image": "/images/hero_image.jpeg",
+    "index": "1"
+  },
+
+  "gallery_1": {
+    "heading": {
+      "title": "Talkin' Tacos®",
+      "subtitle": "Less Talkin' More Tacos ™"
+    },
+    "images": [
+      "/Images/Gallery/gallery_image_1.png",
+      "/Images/Gallery/gallery_image_2.png",
+      "/Images/Gallery/gallery_image_3.png",
+      "/Images/Gallery/gallery_image_4.png",
+      "/Images/Gallery/gallery_image_5.png",
+      "/Images/Gallery/gallery_image_6.png",
+      "/Images/Gallery/gallery_image_7.png",
+      "/Images/Gallery/gallery_image_8.png",
+      "/Images/Gallery/gallery_image_9.png",
+      "/Images/Gallery/gallery_image_10.png",
+      "/Images/Gallery/gallery_image_11.png",
+      "/Images/Gallery/gallery_image_12.png"
+    ],
+    "index": "2"
+  },
+
+  "catering": {
+    "image": "/Images/Catering/Catering.png",
+    "text": {
+      "title": "Catering & Events",
+      "description": "Spice up your corporate and private events with Talkin' Tacos®! Our flavorful and festive catering services bring the fiesta to your workplace and private events, ensuring a memorable experience for all your colleagues and family!"
+    },
+    "index": "3"
+  },
+
+  "gallery_2": {
+    "heading": {
+      "title": "Florida, Atlanta, Washington D.C, NewYork, North Carolina, Texas and growing!"
+    },
+    "images": [
+      "/Images/Gallery_2/gallery2_image_1.png",
+      "/Images/Gallery_2/gallery2_image_2.png",
+      "/Images/Gallery_2/gallery2_image_3.png",
+      "/Images/Gallery_2/gallery2_image_4.png",
+      "/Images/Gallery_2/gallery2_image_5.png",
+      "/Images/Gallery_2/gallery2_image_6.png",
+      "/Images/Gallery_2/gallery2_image_7.png",
+      "/Images/Gallery_2/gallery2_image_8.png",
+      "/Images/Gallery_2/gallery2_image_9.png"
+    ],
+    "index": "4"
+  },
+
+  "dishes": {
+    "heading": {
+      "title": "Try our most popular items",
+      "subtitle": "Treat yourself to our must-try list that has everyone talking"
+    },
+    "index": "5"
+  },
+
+  "giftCard": {
+    "heading": "Gift Cards",
+    "description": "Savor the flavor of Talkin' Tacos® with our gift cards! Give the gift of delicious experiences, treating your friends and family to a fiesta of taste at our restaurant.",
+    "image": "/Images/GiftCard.png",
+    "index": "6"
+  },
+
+  "faq": {
+    "heading": {
+      "title": "Frequently Asked Questions"
+    },
+    "questions": [
+      {
+        "title": "What meals do you serve?",
+        "description": "UI components can improve UX by providing familiar, consistent interactions that make it easy for users to navigate and interact with an application."
+      },
+      {
+        "title": "Do you offer delivery or takeout?",
+        "description": "Developers can ensure the responsiveness of UI components by using techniques such as fluid layouts, flexible grids, and media queries to adapt the components to different screen sizes and orientations."
+      },
+      {
+        "title": "What areas do you serve?",
+        "description": "Some common challenges include maintaining consistency across different devices and screen sizes, ensuring compatibility with various browsers and assistive technologies, and balancing flexibility with ease of use."
+      }
+    ],
+    "index": "7"
+  },
+
+  "location": {
+    "locations": [
+      {
+        "name": "Talkin' Tacos Brickell",
+        "city": "Miami, FL",
+        "address": "97 SW 8th St, Miami, FL 33130",
+        "phone": "(305) 602-4816",
+        "email": "Info@TalkinTacos.net",
+        "mapQuery": "97 SW 8th St, Miami, FL 33130",
+        "longitude": "-80.193726",
+        "latitude": "25.770975"
+      },
+      {
+        "name": "Talkin' Tacos Brickell",
+        "city": "Miami, FL",
+        "address": "97 SW 8th St, Miami, FL 33130",
+        "phone": "(305) 602-4816",
+        "email": "Info@TalkinTacos.net",
+        "mapQuery": "97 SW 8th St, Miami, FL 33130",
+        "longitude": "-80.193726",
+        "latitude": "25.770975"
+      },
+      {
+        "name": "Talkin' Tacos Brickell",
+        "city": "Miami, FL",
+        "address": "97 SW 8th St, Miami, FL 33130",
+        "phone": "(305) 602-4816",
+        "email": "Info@TalkinTacos.net",
+        "mapQuery": "97 SW 8th St, Miami, FL 33130",
+        "longitude": "-80.193726",
+        "latitude": "25.770975"
+      }
+    ],
+    "index": "8"
+  }
+}
